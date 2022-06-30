@@ -31,13 +31,15 @@ function App() {
         className="list_container"
       >
         {products.length > 0 &&
-          products?.map((product) => <List key={product.id} item={product} />)}
+          products?.map((product) => (
+            <ListItem key={product.id} item={product} />
+          ))}
       </InfiniteScroll>
     </>
   );
 }
 
-const List = ({ item }) => {
+const ListItem = ({ item }) => {
   return (
     <div className="list_item">
       <img className="list_item_image" src={item?.images[0]} alt="item_image" />
