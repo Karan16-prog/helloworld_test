@@ -20,6 +20,8 @@ function App() {
     };
     getData();
   }, [skip]);
+  
+  if (!products.length) return <h4 className="list_container">Loading...</h4>;
 
   return (
     <>
@@ -27,7 +29,6 @@ function App() {
         dataLength={products.length}
         next={() => setSkip(products.length)} //function triggered when scrolled to bottom
         hasMore={skip !== 100 ? true : false} //stop infinite scrolling after 100 items
-        loader={<h4>Loading...</h4>}
         className="list_container"
       >
         {products.length > 0 &&

@@ -31,13 +31,37 @@
   height: 80%;
 }
 
+/*chrome and safari*/
+.list_container::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.list_container {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+
 @media only screen and (min-width: 600px) {
   .list_container {
     margin: 3em 2em 3em 2em;
   }
 }
 
+@media only screen and (min-width: 768px) {
+  .list_container {
+    margin: 5em 5em 5em 5em;
+  }
+}
+
 @media only screen and (min-width: 992px) {
+  .list_container {
+    margin: 7em 10em 7em 10em;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
   .list_container {
     margin: 7em 15em 7em 15em;
   }
